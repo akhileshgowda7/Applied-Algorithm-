@@ -14,14 +14,24 @@ def swift_up(S,i):
         print(S)
         return S
     #compare with parent
-    if S[i] > S[i//2]:
-        S[i],S[i//2]=S[i//2],S[i]
+    if S[i] > S[(i-1)//2]:
+        S[i],S[(i-1)//2]=S[(i-1)//2],S[i]
         # print(S)
-        swift_up(S,i//2)
+        swift_up(S,(i-1)//2)
     else:
         return -1
 
 
 if __name__=="__main__":
+    S = []
+    insertion(S,10)
+    insertion(S, 16)
+    insertion(S, 5)
+    insertion(S, 8)
+    insertion(S, 14)
+    insertion(S, 9)
+    insertion(S, 0)
+    insertion(S, 1)
+    insertion(S, 18)
 
-    print(insertion([11,7,8],15))
+    # print(S)
