@@ -28,9 +28,12 @@ def BucketSort(d):
 
 
     s=[]
+
     for i in range(0,len(b)-1):
         if b[i]:
-            s.append(b[i])
+            s += b[i]
     return s
 
 print(BucketSort([0.25,0.23,0.95,0.56,0.53,0.96,0.45,0.44]))
+
+
