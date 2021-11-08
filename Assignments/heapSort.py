@@ -2,8 +2,7 @@
 def heapSort(d):
     input_length = len(d) - 1
     build_max_heap(d,input_length)
-    # print(d)
-    for i in range(input_length,1,-1):
+    for i in range(input_length,0,-1):
         d[0],d[i]=d[i],d[0]
         input_length=input_length-1
         max_heapify(d,0,input_length)
@@ -29,7 +28,6 @@ def max_heapify(d,i,input_length):
     return d
 
 def build_max_heap(d,input_length):
-    b=0*(input_length)
     for i in range(((input_length)//2),-1,-1):
         max_heapify(d,i,input_length)
     return d
