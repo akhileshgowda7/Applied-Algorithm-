@@ -3,8 +3,10 @@ def find_brute(T,P):
     # every starting position
     for i in range(n - m + 1):
         k = 0
-    # conduct O(k) comparisons while k < m and T[i+k] == P[k]:
-        k += 1
+    # conduct O(k) comparisons
+        while k < m and T[i+k] == P[k]:
+            k += 1
+
         if k == m:
             return i
     return -1
